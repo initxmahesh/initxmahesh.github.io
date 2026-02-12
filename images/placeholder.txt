@@ -1,0 +1,18 @@
+This directory contains the following image files needed for the portfolio website:
+
+1. hero-bg.jpg - Hero section background image
+2. profile.jpg - Profile image for the About section
+3. projects/ - Directory containing project images:
+   - project1.jpg through project6.jpg
+4. testimonials/ - Directory containing testimonial profile images:
+   - person1.jpg through person3.jpg
+
+Please replace these placeholder images with your own high-quality images to personalize your portfolio website.
+
+Recommended image sizes:
+- Hero background: 1920x1080px
+- Profile image: 600x800px
+- Project thumbnails: 800x600px
+- Testimonial profile images: 200x200px (square)
+
+For best performance, compress your images before uploading them to your website.
