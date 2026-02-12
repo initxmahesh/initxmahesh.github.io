@@ -39,10 +39,15 @@ jobs:
         env:
           NODE_ENV: production
 
-      - name: Copy CNAME file
+      - name: Copy CNAME and .nojekyll files
         run: |
           if [ -f CNAME ]; then
             cp CNAME dist/CNAME
+          fi
+          if [ -f .nojekyll ]; then
+            cp .nojekyll dist/.nojekyll
+          else
+            touch dist/.nojekyll
           fi
 
       - name: Setup Pages
