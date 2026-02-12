@@ -12,24 +12,39 @@ export const useTheme = () => {
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    // Check localStorage first, then system preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      return savedTheme;
+    // Check if we're in browser environment
+    if (typeof window === 'undefined') {
+      return 'light';
     }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    // Check localStorage first, then system preference
+    try {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        return savedTheme;
+      }
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    } catch (e) {
+      // Fallback if localStorage is not available
+      return 'light';
+    }
   });
 
   useEffect(() => {
     // Apply theme to document
-    const root = document.documentElement;
-    if (theme === 'dark') {
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
+    if (typeof document !== 'undefined') {
+      const root = document.documentElement;
+      if (theme === 'dark') {
+        root.classList.add('dark');
+      } else {
+        root.classList.remove('dark');
+      }
+      // Save to localStorage
+      try {
+        localStorage.setItem('theme', theme);
+      } catch (e) {
+        // Ignore localStorage errors
+      }
     }
-    // Save to localStorage
-    localStorage.setItem('theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {
