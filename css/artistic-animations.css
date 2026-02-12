@@ -1,0 +1,399 @@
+/* 
+ * Portfolio Website - Artistic Animations
+ * Enhanced animations for a unique and minimal experience
+ */
+
+/* Artistic Drawing Animation */
+@keyframes drawLine {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillIn {
+  0% {
+    fill-opacity: 0;
+  }
+  100% {
+    fill-opacity: 1;
+  }
+}
+
+/* Artistic Text Reveal */
+@keyframes artisticReveal {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+/* Artistic Gradient Shift */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Artistic Floating Elements */
+@keyframes artisticFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+  75% {
+    transform: translateY(8px) rotate(-2deg);
+  }
+}
+
+/* Artistic Entrance */
+@keyframes artisticEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(30px) skewX(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0) skewX(0);
+  }
+}
+
+/* Artistic Button Hover */
+@keyframes buttonPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(98, 70, 234, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(98, 70, 234, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(98, 70, 234, 0);
+  }
+}
+
+/* Artistic Background Animation */
+@keyframes patternMove {
+  0% {
+    background-position: 0px 0px, 0px 0px;
+  }
+  100% {
+    background-position: 50px 50px, 25px 25px;
+  }
+}
+
+/* Artistic Cursor Trail */
+@keyframes cursorTrail {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* Artistic Underline Animation */
+@keyframes artisticUnderline {
+  0% {
+    width: 0;
+    height: 2px;
+    left: 0;
+    right: auto;
+  }
+  50% {
+    width: 100%;
+    height: 2px;
+    left: 0;
+    right: auto;
+  }
+  51% {
+    width: 100%;
+    height: 2px;
+    left: auto;
+    right: 0;
+  }
+  100% {
+    width: 0;
+    height: 2px;
+    left: auto;
+    right: 0;
+  }
+}
+
+/* Artistic Rotate */
+@keyframes artisticRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Artistic Shake */
+@keyframes artisticShake {
+  0%, 100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  20% {
+    transform: translateX(-5px) rotate(-2deg);
+  }
+  40% {
+    transform: translateX(5px) rotate(2deg);
+  }
+  60% {
+    transform: translateX(-3px) rotate(-1deg);
+  }
+  80% {
+    transform: translateX(3px) rotate(1deg);
+  }
+}
+
+/* Artistic Ripple */
+@keyframes artisticRipple {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Artistic Text Gradient */
+.artistic-text-gradient {
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--primary-color));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 5s ease infinite;
+}
+
+/* Artistic Floating Elements */
+.artistic-float {
+  animation: artisticFloat 6s ease-in-out infinite;
+}
+
+/* Artistic Entrance Animation */
+.artistic-entrance {
+  animation: artisticEntrance 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Artistic Background Animation */
+.artistic-bg-animation {
+  animation: patternMove 20s linear infinite;
+}
+
+/* Artistic Underline Animation */
+.artistic-underline {
+  position: relative;
+}
+
+.artistic-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  transition: width 0.4s ease;
+}
+
+.artistic-underline:hover::after {
+  width: 100%;
+}
+
+/* Artistic Ripple Effect */
+.artistic-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.artistic-ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.artistic-ripple:active::after {
+  animation: artisticRipple 0.6s ease-out;
+}
+
+/* Artistic Hover Card */
+.artistic-hover-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  z-index: 1;
+}
+
+.artistic-hover-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(98, 70, 234, 0.1) 0%, rgba(228, 88, 88, 0.1) 100%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.4s ease;
+}
+
+.artistic-hover-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.artistic-hover-card:hover::before {
+  opacity: 1;
+}
+
+/* Artistic Rotate on Hover */
+.artistic-rotate-hover {
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.artistic-rotate-hover:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+/* Artistic Delay Classes */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* Artistic Cursor */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(98, 70, 234, 0.5);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: width 0.3s, height 0.3s, background-color 0.3s;
+}
+
+.custom-cursor-follower {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(98, 70, 234, 0.3);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  transition: width 0.3s, height 0.3s, border-color 0.3s;
+}
+
+/* Artistic Loading Animation */
+.artistic-loading {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.artistic-loading div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.artistic-loading div:nth-child(1) {
+  left: 8px;
+  animation: artistic-loading1 0.6s infinite;
+}
+
+.artistic-loading div:nth-child(2) {
+  left: 8px;
+  animation: artistic-loading2 0.6s infinite;
+}
+
+.artistic-loading div:nth-child(3) {
+  left: 32px;
+  animation: artistic-loading2 0.6s infinite;
+}
+
+.artistic-loading div:nth-child(4) {
+  left: 56px;
+  animation: artistic-loading3 0.6s infinite;
+}
+
+@keyframes artistic-loading1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes artistic-loading3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes artistic-loading2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}

@@ -1,0 +1,165 @@
+/**
+ * Portfolio Website - Minimal Cursor Styles
+ * Custom cursor and minimal design elements
+ */
+
+/* Custom Cursor Styles */
+.custom-cursor-enabled {
+  cursor: none !important;
+}
+
+.custom-cursor-enabled * {
+  cursor: none !important;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(98, 70, 234, 0.7);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: width 0.2s, height 0.2s, background-color 0.3s, transform 0.2s;
+  left: 0;
+  top: 0;
+}
+
+.custom-cursor-follower {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid rgba(98, 70, 234, 0.4);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  transition: width 0.2s, height 0.2s, border-color 0.3s, transform 0.2s;
+  left: 0;
+  top: 0;
+}
+
+/* Cursor hover state */
+.cursor-hover {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: rgba(98, 70, 234, 0.8) !important;
+}
+
+.follower-hover {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+/* Cursor active state (click) */
+.cursor-active {
+  transform: translate(-50%, -50%) scale(0.8) !important;
+}
+
+.follower-active {
+  transform: translate(-50%, -50%) scale(0.8) !important;
+}
+
+/* Minimal Button Effects */
+.minimal-button-effect {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.minimal-button-effect:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Minimal Hover Effect */
+.minimal-hover {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.minimal-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Minimal Text Highlight */
+.minimal-highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.minimal-highlight::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.minimal-highlight:hover::after {
+  width: 100%;
+}
+
+/* Minimal Reveal Animation */
+.minimal-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Minimal Loading Animation */
+.minimal-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.minimal-loading div {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  animation: minimalLoading 1.5s infinite ease-in-out;
+}
+
+.minimal-loading div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.minimal-loading div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes minimalLoading {
+  0%, 100% {
+    transform: scale(0.5);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .custom-cursor,
+  .custom-cursor-follower {
+    display: none;
+  }
+  
+  .custom-cursor-enabled,
+  .custom-cursor-enabled * {
+    cursor: auto !important;
+  }
+}
