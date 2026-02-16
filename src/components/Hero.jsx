@@ -1,7 +1,7 @@
-import Terminal from './Terminal';
+import Home from './Home';
 
 const Hero = () => {
-  return <Terminal />;
+  return <Home />;
 };
 
 export default Hero;
