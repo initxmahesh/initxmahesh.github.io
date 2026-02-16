@@ -66,7 +66,7 @@ const Navbar = () => {
                 onClick={() => scrollToSection(item.id)}
                 className={`font-mono text-sm transition-colors ${
                   activeSection === item.id
-                    ? 'text-blue-400'
+                    ? 'text-green-400 terminal-glow'
                     : 'text-gray-400 hover:text-gray-300'
                 }`}
               >

@@ -29,35 +29,35 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 bg-white"
+      className="py-20 bg-black"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            My <span className="text-gradient">Projects</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+            My <span className="text-green-400 terminal-glow">Projects</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-primary-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-green-400 mx-auto"></div>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-gray-50 to-primary-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2"
+              className="bg-gray-900 border border-gray-800 rounded-xl p-6 shadow-lg hover:border-gray-700 transition-all transform hover:-translate-y-2"
             >
               <div className="text-6xl mb-4">{project.image}</div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-3">{project.title}</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+              <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
+              <p className="text-gray-300 mb-4 leading-relaxed">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tech.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium"
+                    className="px-3 py-1 bg-gray-800 border border-gray-700 text-green-400 rounded-full text-sm font-medium"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
-              <button className="text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+              <button className="text-green-400 font-semibold hover:text-green-300 transition-colors">
                 View Project →
               </button>
             </div>
