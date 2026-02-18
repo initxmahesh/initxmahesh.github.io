@@ -38,6 +38,14 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Verify build output
+        run: |
+          if [ ! -d "dist" ] || [ -z "$(ls -A dist)" ]; then
+            echo "Error: dist directory is missing or empty"
+            exit 1
+          fi
+          echo "Build output verified successfully"
+
       - name: Copy CNAME and .nojekyll files
         run: |
           if [ -f CNAME ]; then
@@ -53,9 +61,9 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: './dist'
+          path: 'dist'
 
   deploy:
     environment:
