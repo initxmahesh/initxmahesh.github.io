@@ -6,7 +6,7 @@ import { FeaturesSectionDemo } from "./ui/features-section-demo";
 const Projects = () => {
   const [showAll, setShowAll] = useState(false);
   return (
-    <section id="projects" className="py-24 px-6">
+    <section id="projects" aria-label="Projects" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-4 mb-12">
           <span className="section-number">03</span>

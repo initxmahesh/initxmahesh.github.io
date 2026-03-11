@@ -21,7 +21,11 @@ const experiences: Experience[] = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 px-6 ">
+    <section
+      id="experience"
+      aria-label="Work Experience"
+      className="py-24 px-6 "
+    >
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-4 mb-12">
           <span className="section-number">02</span>
@@ -40,7 +44,9 @@ const Experience = () => {
                     <h3 className="text-xl font-semibold">{exp.role}</h3>
                     <p className="text-muted-foreground">{exp.company}</p>
                   </div>
-                  <span className="font-mono text-xs text-muted-foreground">{exp.period}</span>
+                  <span className="font-mono text-xs text-muted-foreground">
+                    {exp.period}
+                  </span>
                 </div>
 
                 <ul className="space-y-2 text-muted-foreground text-sm list-disc pl-5">

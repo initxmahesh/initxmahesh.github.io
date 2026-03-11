@@ -11,16 +11,19 @@ const SECTIONS = [
 ];
 
 const Navigation = () => {
-  const handleNavigate = useCallback((event: MouseEvent<HTMLAnchorElement>, id: string) => {
-    event.preventDefault();
-    const element = document.getElementById(id);
+  const handleNavigate = useCallback(
+    (event: MouseEvent<HTMLAnchorElement>, id: string) => {
+      event.preventDefault();
+      const element = document.getElementById(id);
 
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
 
-    window.history.replaceState(null, "", `${id}`);
-  }, []);
+      window.history.replaceState(null, "", `${id}`);
+    },
+    [],
+  );
 
   const handleHome = useCallback((event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
@@ -29,12 +32,19 @@ const Navigation = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
+    <nav
+      aria-label="Main navigation"
+      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border"
+    >
       <div className="max-w-7xl mx-auto px-6 py-3 md:py-4 flex items-center justify-between">
-        <NavLink to="/" onClick={handleHome} className="font-mono text-base md:text-lg font-semibold">
+        <NavLink
+          to="/"
+          onClick={handleHome}
+          className="font-mono text-base md:text-lg font-semibold"
+        >
           initxmahesh<span className="text-muted-foreground">()</span>
         </NavLink>
-        
+
         <div className="hidden md:flex items-center gap-8">
           {SECTIONS.map((section) => (
             <NavLink
@@ -54,6 +64,7 @@ const Navigation = () => {
             href={resume}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="View Mahesh Chaudhary's resume (PDF)"
             className="block font-mono text-sm text-foreground hover:underline cursor-pointer"
           >
             Resume

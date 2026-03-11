@@ -7,19 +7,20 @@ import Contact from "./components/Contact";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
 function App() {
-
   return (
     <ThemeProvider>
       <div className="min-h-screen">
         <Navigation />
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
+        <main>
+          <Hero />
+          <About />
+          <Experience />
+          <Projects />
+        </main>
         <Contact />
       </div>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;
