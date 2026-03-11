@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://chaudharymahesh.com.np/sitemap.xml
+Host: https://chaudharymahesh.com.np

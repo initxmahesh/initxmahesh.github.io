@@ -3,7 +3,7 @@ import Marquee from "./Marquee";
 
 const About = () => {
     return (
-      <section id="about" className="pt-16 pb-12 px-6">
+      <section id="about" aria-label="About Mahesh Chaudhary" className="pt-16 pb-12 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-1.5 sm:gap-2 md:gap-4 mb-6 sm:mb-8 md:mb-12">
             <span className="section-number text-[10px] sm:text-xs md:text-sm whitespace-nowrap">01</span>
