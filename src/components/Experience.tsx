@@ -152,13 +152,13 @@ const Experience = () => {
                     <h3 className="text-lg md:text-xl font-semibold leading-tight">
                       {exp.company}
                     </h3>
-                    {exp.employment && (
+                    {/* {exp.employment && (
                       <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
                         <span className="inline-flex items-center rounded-full border border-border px-2 py-0.5">
                           {exp.employment}
                         </span>
                       </div>
-                    )}
+                    )} */}
                   </div>
 
                   {exp.location && (
