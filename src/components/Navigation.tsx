@@ -1,7 +1,7 @@
 import { useCallback, type MouseEvent } from "react";
 import { NavLink } from "../components/NavLink";
 import ThemeToggle from "./ui/ThemeToggle";
-import resume from "../assets/Resume.pdf";
+import resume from "../assets/MaheshResume.pdf";
 
 const SECTIONS = [
   { label: "About", id: "about" },

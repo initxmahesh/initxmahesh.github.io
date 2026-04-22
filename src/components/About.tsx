@@ -1,4 +1,4 @@
-import resume from "../assets/Resume.pdf";
+import resume from "../assets/MaheshResume.pdf";
 import Marquee from "./Marquee";
 
 const About = () => {
