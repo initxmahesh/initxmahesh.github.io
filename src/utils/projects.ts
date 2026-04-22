@@ -20,10 +20,30 @@ const rawProjects: RawProject[] = [
     id: "0",
     name: "Hamro Calendar",
     description:
-      "Webapp that helps user to see, create and manage their plans, meetings and other holidays.",
-    tools: "ReactJs, NodeJs, Figma, Holiday API",
+      "Hamro Calendar, a modern calendar and event planning platform that enables seamless event management, country-aware public holiday context, and AI-generated weekly insights to improve personal and team productivity.",
+    tools:
+      "React, Tailwind CSS, Calendarific API, Google Gemini (@google/genai), localStorage, Figma",
     website: "https://github.com/initxmahesh",
     github: "https://github.com/TEJ-Fellowship/pbl/tree/main/PBL1/Eventia-Project/eventia",
+  },
+  {
+    id: "1",
+    name: "RealEstate",
+    description:
+      "A modern platform connecting buyers, renters, and agents to discover and manage properties with ease.",
+    tools: "MongoDB, Express, React, Node.js, Tailwind CSS, Leaflet, JWT, Cloudinary",
+    website: "https://github.com/initxmahesh",
+    github: "https://github.com/TEJ-Fellowship/pbl/tree/main/PBL2/RealEstateListingnFinder",
+  },
+  {
+    id: "2",
+    name: "Career Mapper",
+    description:
+      "Built Lakshya, a modern career planning platform that helps learners map interests, track measurable goals, and receive AI-powered course and skill recommendations for structured growth.",
+    tools:
+      "React.js, Tailwind CSS, Google Gemini API, Material UI (MUI)",
+    website: "https://github.com/initxmahesh",
+    github: "https://github.com/TEJ-Fellowship/pbl/tree/main/PBL3/Lakshya",
   },
 ];
 
