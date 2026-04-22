@@ -23,7 +23,7 @@ const rawProjects: RawProject[] = [
       "Webapp that helps user to see, create and manage their plans, meetings and other holidays.",
     tools: "ReactJs, NodeJs, Figma, Holiday API",
     website: "https://github.com/initxmahesh",
-    github: "https://github.com/initxmahesh",
+    github: "https://github.com/TEJ-Fellowship/pbl/tree/main/PBL1/Eventia-Project/eventia",
   },
 ];
 
