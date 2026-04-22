@@ -15,7 +15,7 @@ interface ExperienceCompany {
 
 const experiences: ExperienceCompany[] = [
   {
-    company: "T.E.J. Center",
+    company: "T.E.J. Center Pvt. Ltd.",
     location: "Kupondole, Lalitpur, Nepal",
     roles: [
       {
@@ -26,6 +26,16 @@ const experiences: ExperienceCompany[] = [
           "Containerized applications using Docker.",
           "Designed CI/CD pipelines with GitHub Actions.",
           "Built a full-stack application with React.js, Node.js, Express.js, PostgreSQL, and Tailwind CSS, supporting 500+ concurrent users and 20% faster load times.",
+        ],
+      },
+      {
+        title: "Software Engineering Fellow",
+        period: "Jun 2025 - Dec 2025",
+        highlights: [
+          "Gained hands-on experience in modern web development practices by building real-world production-oriented applications.",
+          "Designed and implemented scalable system architectures, emphasizing maintainability, performance, and real-world deployment practices.",
+          "Integrated REST APIs, databases (MongoDB/PostgreSQL), and AI services (Gemini), with hands-on testing and debugging using Postman.",
+          "Worked on monorepo and followed Git/GitHub workflows (branching, pull requests) to support collaborative and maintainable development.",
         ],
       },
     ],

@@ -45,6 +45,16 @@ const rawProjects: RawProject[] = [
     website: "https://github.com/initxmahesh",
     github: "https://github.com/TEJ-Fellowship/pbl/tree/main/PBL3/Lakshya",
   },
+  {
+    id: "3",
+    name: "Movie Ticket Booking",
+    description:
+      "Engineered a backend-first, scalable movie ticketing workflow from booking to payment with Redis-based seat locking (TTL), Kafka-driven concurrency handling, and Stripe payment integration for high-traffic reliability.",
+    tools:
+      "Node.js, Express.js, Redis (TTL Seat Locking), Apache Kafka, Stripe Payment Gateway, REST APIs, Distributed System Design",
+    website: "https://github.com/initxmahesh",
+    github: "https://github.com/initxmahesh",
+  },
 ];
 
 const splitTools = (tools: string): string[] =>
