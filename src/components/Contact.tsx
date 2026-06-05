@@ -44,8 +44,8 @@ const Contact = () => {
 
             <div className="space-y-4">
               <a
-                href="mailto:initx.mahesh@gmail.com"
-                aria-label="Send email to initx.mahesh@gmail.com"
+                href="mailto:initx@chaudharymahesh.com.np"
+                aria-label="Send email to initx@chaudharymahesh.com.np"
                 className="flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors group"
               >
                 <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
@@ -53,7 +53,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Email</div>
-                  <div className="font-medium">initx.mahesh@gmail.com</div>
+                  <div className="font-medium">initx@chaudharymahesh.com.np</div>
                 </div>
               </a>
 
